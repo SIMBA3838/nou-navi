@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#3D78F2">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="description" content="相手の行動の背景を理解し、接し方のヒントを見つけるチェックツール">
-<title>思考・行動パターン分析室</title>
+<title>あのナビ</title>
 <link rel="icon" type="image/png" href="https://github.com/SIMBA3838/shikou-koudou-bunsekishitu/blob/main/%E8%A8%BA%E6%96%AD%E3%83%AD%E3%82%B3%E3%82%99.PNG?raw=true">
 <link rel="apple-touch-icon" href="https://github.com/SIMBA3838/shikou-koudou-bunsekishitu/blob/main/%E8%A8%BA%E6%96%AD%E3%83%AD%E3%82%B3%E3%82%99.PNG?raw=true">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -168,11 +168,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);l
 .adv-li{font-size:11.5px;line-height:1.6;margin-bottom:7px;display:flex;gap:5px;align-items:flex-start}
 .adv-x{color:#DC2626;font-weight:700}.adv-c{color:#059669;font-weight:700}
 .occ-ex-label{font-size:12px;font-weight:700;color:var(--s);margin-bottom:10px}
-.occ-ex{display:flex;gap:10px;align-items:center;padding:10px 12px;background:#F8F9FB;border-radius:12px;margin-bottom:8px}
-.occ-ex-ic{font-size:20px;flex-shrink:0}
-.occ-ex-name{font-size:13px;font-weight:700;margin-bottom:2px}
-.occ-ex-issue{font-size:11px;color:var(--s);line-height:1.5}
-.occ-ex-fix{color:#3D78F2}
+.oscene{display:flex;gap:12px;align-items:center;padding:10px;background:#F8F9FB;border-radius:14px;margin-bottom:10px}
+.oscene-img{width:72px;flex-shrink:0}.oscene-img svg{width:100%;height:auto;display:block;border-radius:8px}
+.oscene-t{font-size:12.5px;font-weight:700;line-height:1.5;margin-bottom:4px}
+.oscene-d{font-size:11.5px;color:#3D78F2;line-height:1.5}
 .wf-card{display:flex;align-items:center;gap:12px;padding:14px;border:1px solid var(--b);border-radius:14px;margin-bottom:10px;cursor:pointer}
 .wf-ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .wf-body{flex:1;min-width:0}
@@ -182,7 +181,8 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);l
 .phase-list{display:flex;flex-direction:column;gap:0}
 .phase-row{display:flex;gap:12px;padding:14px 0;cursor:pointer;border-bottom:1px solid var(--b)}
 .phase-row:last-child{border-bottom:none}
-.phase-n{width:42px;flex-shrink:0;text-align:center;font-size:11px;font-weight:800;color:#3D78F2;background:#EEF3FF;border-radius:10px;padding:8px 0;height:fit-content;line-height:1.3}
+.phase-n{width:58px;flex-shrink:0;text-align:center;font-size:10px;font-weight:700;color:#3D78F2;background:#EEF3FF;border-radius:10px;padding:8px 4px;height:fit-content;line-height:1.4;letter-spacing:-0.5px}
+.phase-n b{display:block;font-size:17px;margin-top:2px;letter-spacing:0}
 .phase-t{font-size:13px;font-weight:700;margin-bottom:4px}
 .phase-d{font-size:11.5px;color:var(--s);line-height:1.7}
 .phase-link{font-size:12px;color:#3D78F2;font-weight:600;margin-top:6px}
@@ -243,12 +243,12 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--t);l
 <!-- ===== SCREEN: TOP ===== -->
 <div class="scr on" id="s-top">
 <header class="hdr"><div class="hdr-in">
-  <div class="logo" onclick="go('s-top')" style="cursor:pointer"><img src="https://github.com/SIMBA3838/shikou-koudou-bunsekishitu/blob/main/%E8%A8%BA%E6%96%AD%E3%83%AD%E3%82%B3%E3%82%99%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E.PNG?raw=true" alt="ロゴ">思考・行動パターン分析室</div>
+  <div class="logo" onclick="go('s-top')" style="cursor:pointer"><img src="https://github.com/SIMBA3838/shikou-koudou-bunsekishitu/blob/main/%E8%A8%BA%E6%96%AD%E3%83%AD%E3%82%B3%E3%82%99%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E.PNG?raw=true" alt="ロゴ">あのナビ</div>
 </div></header>
 <section class="hero">
   <div class="hero-sub">BEHAVIOR ANALYSIS ROOM</div>
-  <h1>なぜ、あの人は<br>そう行動するんだろう？</h1>
-  <p>行動の背景にある「思考のクセ」を理解して、<br>お互いがもっとラクになるヒントを見つけませんか？</p>
+  <h1>あの人の「なぜ？」が<br>わかるナビ</h1>
+  <p>「なぜできないの？」を「どうすれば伝わる？」に変える、<br>関わり方のヒントを見つけませんか？</p>
 </section>
 <section class="hero-img">
   <img src="IMG_0500.png" alt="" onerror="this.parentElement.innerHTML='<div style=padding:40px;text-align:center;color:#6B7280;font-size:13px>メイン画像</div>'">
@@ -778,12 +778,72 @@ const WORKFLOWS=[
   {id:"task",icon:"🎯",color:"#E8A04D",title:"目標設定・タスク管理",sub:"行動管理の型",desc:"やるべきことを明確にし、着実に実行するための型。"},
   {id:"care",icon:"❤️",color:"#E87B7B",title:"ストレス・感情を整える",sub:"セルフケアの型",desc:"感情やストレスを整え、安定して行動できる状態をつくる型。"},
 ];
-const OCC_EXAMPLES=[
-  {icon:"💇",name:"美容師",issue:"接客・施術・会計が重なると困りやすい",fix:"タイムラインで区切って伝えると安心"},
-  {icon:"🩺",name:"介護職",issue:"利用者対応と記録入力が重なると抜けやすい",fix:"記録の手順をチェックリスト化する"},
-  {icon:"💻",name:"ITエンジニア",issue:"複数タスクや仕様変更で混乱しやすい",fix:"タスクを細かく分解して管理する"},
-  {icon:"🍽",name:"飲食店スタッフ",issue:"注文・調理・記憶が重なるとミスが増える",fix:"役割分担と声かけルールを決める"},
-];
+// 職種ごとの「あるある場面」をアニメ画（SVG）付きで表示
+function occSceneSVG(kind){
+  const C={s:'#3D78F2',sl:'#EEF3FF',w:'#fff',sk:'#FFE0C2',g:'#E3F5E8',y:'#FBE7A0',r:'#FBD5D5'};
+  const wrap=(inner)=>`<svg viewBox="0 0 88 64" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+  const head=(x,y,s=1)=>`<circle cx="${x}" cy="${y}" r="${7*s}" fill="${C.sk}"/><path d="M${x-7*s} ${y-1*s} a${7*s} ${7*s} 0 0 1 ${14*s} 0 z" fill="#5b4636"/>`;
+  const body=(x,y,col,s=1)=>`<path d="M${x-8*s} ${y+13*s} q0 -8 ${8*s} -8 q${8*s} 0 ${8*s} 8 z" fill="${col}"/>`;
+  const P={
+    // 美容
+    beauty:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(30,24)}${body(30,24,'#fff')}<rect x="48" y="14" width="30" height="36" rx="4" fill="#fff" stroke="${C.s}" stroke-width="1.5"/><circle cx="63" cy="26" r="5" fill="${C.sk}"/><path d="M58 24 q5 -6 10 0" fill="#5b4636"/><path d="M22 20 l-5 -4" stroke="${C.s}" stroke-width="2" stroke-linecap="round"/><path d="M20 22 l-5 -2" stroke="${C.s}" stroke-width="2" stroke-linecap="round"/>`),
+    nurse:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(28,24)}<path d="M20 37 q0 -8 8 -8 q8 0 8 8 z" fill="#fff"/><path d="M28 31 v6 M25 34 h6" stroke="${C.r}" stroke-width="1.5"/><rect x="50" y="20" width="30" height="20" rx="3" fill="#fff" stroke="${C.s}" stroke-width="1.5"/><path d="M54 30 h6 l2 -4 2 8 2 -4 h6" fill="none" stroke="${C.r}" stroke-width="1.5"/>`),
+    sales:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(26,22)}${body(26,22,C.s)}<rect x="46" y="16" width="32" height="24" rx="3" fill="#fff" stroke="${C.s}" stroke-width="1.5"/><path d="M50 34 l6 -8 5 5 6 -10 5 7" fill="none" stroke="${C.g==C.g?'#2A9D4A':C.s}" stroke-width="1.5"/><path d="M36 24 h8" stroke="${C.s}" stroke-width="2" stroke-linecap="round"/>`),
+    food:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(24,24)}<path d="M16 37 q0 -8 8 -8 q8 0 8 8 z" fill="#fff"/><ellipse cx="58" cy="30" rx="16" ry="5" fill="#fff" stroke="${C.s}" stroke-width="1.5"/><path d="M58 25 v-6" stroke="${C.s}" stroke-width="1.5"/><circle cx="52" cy="29" r="2" fill="${C.y}"/><circle cx="62" cy="29" r="2" fill="${C.r}"/>`),
+    care:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(26,22)}${body(26,22,'#7CC4A0')}${head(58,30,0.9)}<path d="M50 46 q0 -7 8 -7 q8 0 8 7 z" fill="#C9B8E0"/><path d="M36 26 q6 4 14 4" stroke="${C.s}" stroke-width="2" stroke-linecap="round" fill="none"/>`),
+    teach:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(24,22)}${body(24,22,C.s)}<rect x="44" y="12" width="36" height="26" rx="2" fill="#2E5E3E"/><path d="M50 20 h22 M50 26 h16" stroke="#fff" stroke-width="1.2"/><path d="M36 24 l6 -2" stroke="${C.s}" stroke-width="2" stroke-linecap="round"/>`),
+    office:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(28,22)}${body(28,22,C.s)}<rect x="48" y="22" width="30" height="20" rx="2" fill="#fff" stroke="${C.s}" stroke-width="1.5"/><rect x="52" y="42" width="22" height="3" fill="${C.s}"/><path d="M52 28 h22 M52 33 h16" stroke="${C.s}" stroke-width="1.2"/>`),
+    default:wrap(`<rect x="0" y="0" width="88" height="64" rx="8" fill="${C.sl}"/>${head(44,24)}${body(44,24,C.s)}<circle cx="44" cy="44" r="3" fill="${C.s}"/>`),
+  };
+  return P[kind]||P.default;
+}
+// 職種キー → 場面例（その職業ならではの言葉）
+const OCC_SCENES={
+  "美容":{svg:"beauty",label:"美容師",scenes:[
+    {t:"指名・カラー・カットが重なる繁忙時間",d:"放置タイマーと予約表を見える化すると安心"},
+    {t:"「いい感じで」と言われたカウンセリング",d:"写真やサンプルで仕上がりを一緒に確認"},
+    {t:"会話しながらの細かいカット",d:"集中したい工程は一言伝えて手を止めない"}]},
+  "ネイル":{svg:"beauty",label:"ネイリスト",scenes:[
+    {t:"ジェルの硬化時間と施術の掛け持ち",d:"工程ごとにタイマーで区切ると抜けが減る"},
+    {t:"「おまかせで」のデザイン相談",d:"サンプル帳から一緒に選ぶと認識が揃う"},
+    {t:"薬剤の匂いと細かい作業が続く午後",d:"換気と小休憩を挟むと集中が保てる"}]},
+  "医療":{svg:"nurse",label:"看護師",scenes:[
+    {t:"申し送り中に別の対応が入る",d:"メモして復唱、あとで記録と照合"},
+    {t:"ナースコールと処置が同時に発生",d:"緊急度の基準を共有しておくと迷わない"},
+    {t:"夜勤明けの記録・確認作業",d:"ダブルチェックの仕組みでミスを防ぐ"}]},
+  "介護":{svg:"care",label:"介護職",scenes:[
+    {t:"複数の利用者さんから同時に呼ばれる",d:"優先順位を声に出して整理すると落ち着く"},
+    {t:"口頭の申し送りと記録入力が重なる",d:"記録の手順をチェックリスト化する"},
+    {t:"入浴・排泄介助の連続",d:"区切りごとに小休憩を入れると安定する"}]},
+  "営業":{svg:"sales",label:"営業職",scenes:[
+    {t:"商談予定が急に変更になる",d:"変更後の予定をその場で整理し直す"},
+    {t:"複数案件のフォローが重なる",d:"顧客管理ツールで抜けを見える化"},
+    {t:"見積・提案書の作成",d:"チェックリストで細部の確認を習慣に"}]},
+  "飲食":{svg:"food",label:"飲食店スタッフ",scenes:[
+    {t:"ピーク時に注文・配膳・会計が重なる",d:"必ず復唱・記録して役割分担を決める"},
+    {t:"条件付きの注文（アレルギー等）",d:"伝票に条件をメモして共有"},
+    {t:"閉店後の締め作業",d:"チェックリストで抜け漏れを防ぐ"}]},
+  "教育":{svg:"teach",label:"教員",scenes:[
+    {t:"授業の予定が急に変わる",d:"授業計画を手元に置いて切り替える"},
+    {t:"保護者対応で想定外の質問",d:"想定問答を準備しておくと安心"},
+    {t:"採点・事務作業が重なる",d:"チェックの手順を決めて抜けを防ぐ"}]},
+  "事務":{svg:"office",label:"事務職",scenes:[
+    {t:"メール・依頼・電話が同時に来る",d:"優先度を決めて一つずつ対応"},
+    {t:"複数案件の締め切り管理",d:"ToDoリストで見える化する"},
+    {t:"周囲の話し声がある中での書類作成",d:"静かな席や時間帯を確保すると集中できる"}]},
+};
+// 選んだ職種に対応する場面例データを解決
+function resolveOccScenes(){
+  const kw=S.occKw||[];
+  const hint=POOLS.occHint||{};
+  let key='default';
+  for(const[pk,kws] of Object.entries(hint)){ if(kw.some(k=>kws.includes(k))){key=pk;break} }
+  if(OCC_SCENES[key])return OCC_SCENES[key];
+  return {svg:'default',label:S.occName||'この職種',scenes:[
+    {t:'複数の作業が同時に重なる場面',d:'優先順位を決めて一つずつ対応する'},
+    {t:'急な変更や追加依頼が入る場面',d:'変更後の手順をその場で確認する'},
+    {t:'忙しい時間帯が続く場面',d:'小休憩を挟むと集中が保てる'}]};
+}
 function showDetail(){
   if(!curResult)return;
   const top=curResult;
@@ -793,16 +853,20 @@ function showDetail(){
       <div class="wf-body"><div class="wf-title">${w.title} <span class="wf-sub">（${w.sub}）</span></div><div class="wf-desc">${w.desc}</div></div>
       <div class="wf-pdf">📄 PDFで見る</div>
     </div>`).join('');
-  const occEx=OCC_EXAMPLES.map(o=>`
-    <div class="occ-ex"><div class="occ-ex-ic">${o.icon}</div><div class="occ-ex-body"><div class="occ-ex-name">${o.name}</div><div class="occ-ex-issue">${o.issue}　<span class="occ-ex-fix">▸ ${o.fix}</span></div></div></div>`).join('');
+  // 選んだ職種の場面例（その職業ならではの言葉＋アニメ画）
+  const occData=resolveOccScenes();
+  const occScenes=occData.scenes.map(s=>`
+    <div class="oscene">
+      <div class="oscene-img">${occSceneSVG(occData.svg)}</div>
+      <div class="oscene-body"><div class="oscene-t">${s.t}</div><div class="oscene-d">▸ ${s.d}</div></div>
+    </div>`).join('');
 
   document.getElementById('detailArea').innerHTML=`
     <div class="am-prog"><span class="am-prog-l">観察の深さ</span><span class="am-dots">●●●●●<span style="color:#ddd">●</span></span><span class="am-prog-n">4 / 5</span></div>
 
     <div class="res-sec">
       <h3><span class="num-b">1</span> 場面ごとの関わり方の例</h3>
-      <div class="occ-tabs"><span class="occ-tab on">職場</span><span class="occ-tab">家庭</span><span class="occ-tab">接客業</span><span class="occ-tab">学校</span><span class="occ-tab">医療・福祉</span></div>
-      <div class="occ-label">職場（例：${S.occName||'営業職'}）</div>
+      <div class="occ-label">${occData.label}（${S.occName||''}）</div>
       <div class="adv-grid">
         <div class="adv-col avoid">
           <div class="adv-h avoid">🚫 避けたい伝え方</div>
@@ -813,8 +877,8 @@ function showDetail(){
           ${['「A→B→Cの順で進めよう」','「今やることはこれだけ」','「手順を一緒に確認しよう」','「○○まで終わったら教えて」'].map(t=>`<div class="adv-li"><span class="adv-c">✓</span>${t}</div>`).join('')}
         </div>
       </div>
-      <div class="occ-ex-label">他の職業例</div>
-      ${occEx}
+      <div class="occ-ex-label">${occData.label}でありがちな場面</div>
+      ${occScenes}
     </div>
 
     <div class="res-sec">
@@ -827,15 +891,15 @@ function showDetail(){
       <h3><span class="num-b">3</span> 理解を深めるための参考視点</h3>
       <div class="phase-list">
         <div class="phase-row" onclick="showPhase('ph','1')">
-          <div class="phase-n">フェーズ<br>1</div>
+          <div class="phase-n">フェーズ<b>1</b></div>
           <div class="phase-body"><div class="phase-t">まずは「行動そのものを見る」</div><div class="phase-d">同じ行動でも、環境・経験・体調・認知スタイルなど、背景は人によって異なります。一般論として、一部の行動パターンは、神経発達特性との関係が語られることがあります。</div><div class="phase-link">参考になる考え方（PDF）を見る ›</div></div>
         </div>
         <div class="phase-row" onclick="showPhase('ph','2')">
-          <div class="phase-n">フェーズ<br>2</div>
+          <div class="phase-n">フェーズ<b>2</b></div>
           <div class="phase-body"><div class="phase-t">環境と伝え方を先に変えてみる</div><div class="phase-d">診断を考える前に、「何を変えたら動きやすくなるか」を観察してみましょう。</div></div>
         </div>
         <div class="phase-row" onclick="showPhase('ph','3')">
-          <div class="phase-n">フェーズ<br>3</div>
+          <div class="phase-n">フェーズ<b>3</b></div>
           <div class="phase-body"><div class="phase-t">必要に応じて専門家へ相談する</div><div class="phase-d">困りごとが続き、生活や仕事に影響が続く場合は、専門機関への相談も選択肢になります。この分析は、相手理解や接し方を考える参考情報です。これは診断ではありません。</div></div>
         </div>
       </div>
